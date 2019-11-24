@@ -14,10 +14,10 @@
           <v-text-field label="Username" required></v-text-field>
           <v-text-field label="Password" required></v-text-field>
           <div class="my-2">
-            <v-btn color="normal" dark width="100%">Sign up</v-btn>
+            <v-btn color="normal" dark width="100%">Log in</v-btn>
           </div>
           <div class="my-5">
-            No account? <a href="#" class="text-danger">Register</a>
+            No account? <router-link to="/register">Register</router-link>
           </div>
           <div class="mt-5 text-center">
             <a href="#" class="text-danger">Forgot password?</a>
@@ -32,7 +32,7 @@ export default {
   name: 'Login'
 };
 </script>
-<style>
+<style scoped>
 .container {
   height: 100%;
   vertical-align: middle;

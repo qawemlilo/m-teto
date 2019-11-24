@@ -18,17 +18,23 @@
     </div>
 
     <div class="mt-10 mx-10">
-      <v-btn color="normal" dark width="100%">Next >></v-btn>
+      <v-btn color="normal" dark width="100%" @click="goHome">Next >></v-btn>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ThankYou'
+  name: 'ThankYou',
+
+    methods: {
+      goHome() {
+        this.$router.push('/home');
+      }
+    }
 };
 </script>
-<style>
+<style scoped>
 .container {
   height: 100%;
   vertical-align: middle;

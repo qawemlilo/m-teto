@@ -12,10 +12,10 @@
           <v-autocomplete label="Location" hide-no-data :items="locations"></v-autocomplete>
           <v-autocomplete label="School" hide-no-data :items="schools"></v-autocomplete>
           <div class="my-2">
-            <v-btn color="normal" dark width="100%">Register</v-btn>
+            <v-btn color="normal" dark width="100%" @click="goToAssessment">Register</v-btn>
           </div>
           <div class="my-5">
-            Already have a member? <a href="#" class="text-danger">Login</a>
+            Already have a member? <router-link to="/login">Login</router-link>
           </div>
         </v-form>
     </div>
@@ -26,15 +26,21 @@
 export default {
   name: 'Register',
 
-    data: () => ({
+  data: () => ({
       ages: [10, 11, 12, 13, 14],
       genders: ['Boy', 'Girl', 'Trans boy', 'Trans girl', 'Prefer not say'],
       schools: ['Table view primary', 'Nyanga high school'],
       locations: ['Nyanga', 'Gugulethu', 'Table view'],
-    }),
+  }),
+
+  methods: {
+    goToAssessment() {
+      this.$router.push('/customize');
+    }
+  }
 };
 </script>
-<style>
+<style scoped>
 .container {
   height: 100%;
   vertical-align: middle;

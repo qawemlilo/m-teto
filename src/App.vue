@@ -1,23 +1,16 @@
 <template>
   <v-app>
     <v-content>
-      <Results />
+      <transition name="slide-left">
+        <router-view/>
+      </transition>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Results from './components/Results';
-
 export default {
-  name: 'App',
-
-  components: {
-    Results,
-  },
-
-  data: () => ({
-    //
-  }),
+  name: 'App'
 };
 </script>
+

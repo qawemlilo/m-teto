@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="container-inner">
     <div style="background:#fff" class="px-4 py-4">
      <p>Do you understand what gender based violence is?</p>
      <v-radio-group v-model="do_you_know_gbv" :mandatory="false">
@@ -24,7 +25,7 @@
      </v-radio-group>
     </div>
 
-    <div style="background:#fff" class="mt-2 px-4 py-4" v-if="do_you_know_gbv == 'yes'">
+    <div style="background:#fff" class="mt-2  px-4 py-4" v-if="do_you_know_gbv == 'yes'">
      <p>Do you feel like you have committed gender based violence?</p>
      <v-radio-group v-model="radios" :mandatory="false">
       <v-radio label="Yes" value="radio-1"></v-radio>
@@ -33,7 +34,8 @@
     </div>
 
     <div class="my-2"  v-if="do_you_know_gbv">
-      <v-btn color="normal" dark width="100%">Next >></v-btn>
+      <v-btn color="normal" dark width="100%" @click="goHome">Next >></v-btn>
+    </div>
     </div>
   </div>
 </template>
@@ -45,14 +47,25 @@ export default {
     do_you_know_gbv: null,
     radios: ''
   }),
+
+  methods: {
+    goHome() {
+      this.$router.push('/thankyou');
+    }
+  }
 };
 </script>
-<style>
+<style scoped>
 .container {
   height: 100%;
+  
   vertical-align: middle;
   background-image: url(../assets/bg.png);
   background-repeat: repeat;
+}
+
+.container > div {
+  padding:10px;;
 }
 
 .theme--light.v-label {

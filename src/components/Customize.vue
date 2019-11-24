@@ -1,11 +1,11 @@
 <template>
   <div class="container">
 <audio controls ref="audioFile">
-  <source src="../assets/teto.mp3" type="audio/mpeg">
+  <source src="../assets/teto-intro.mp3" type="audio/mpeg">
 </audio>
     <div style="padding-top:40%">
 <hgroup class="speech-bubble">
-	<p>Hi there, <br>You can ask me anything</p>
+	<p>You can customize me and make me look cool</p>
 </hgroup>
          <v-img
           :src="require('../assets/teto.gif')"
@@ -16,13 +16,13 @@
         ></v-img>     
     </div>
     <div>
-      <v-form class="px-10">
-        <v-row>
-         <v-col cols="12" sm="6">
-          <v-autocomplete solo single-line label="Search" :items="results" @change="goToResults"></v-autocomplete>
-         </v-col>
-        </v-row>
-      </v-form>
+     <v-row>
+       <v-color-picker  hide-canvas></v-color-picker>
+     </v-row>
+    </div>
+
+    <div class="mt-10 mx-10">
+      <v-btn color="normal" dark width="100%" @click="goToNext">Next >></v-btn>
     </div>
   </div>
 </template>
@@ -39,8 +39,8 @@ export default {
   }),
 
   methods: {
-    goToResults() {
-      this.$router.push('/results');
+    goToNext() {
+      this.$router.push('/assessment');
     }
   },
 
@@ -55,9 +55,9 @@ export default {
 .container {
   height: 100%;
   vertical-align: middle;
-  padding: 1rem;
-  background-image: url(../assets/bg.png);
-  background-repeat: repeat;
+  padding: 2rem;
+  background-image: none!important;
+  background-color: #FFF!important;
 }
 
 .theme--light.v-label {
@@ -71,10 +71,10 @@ export default {
 
 .speech-bubble {
 	position: relative;
-	background: #ffffff;
+	background: #00f900;
 	border-radius: .4em;
-  padding: 1rem;
   font-size: 1.5rem;
+  color: #FFF;
   padding:.8rem;
 }
 
@@ -86,7 +86,7 @@ export default {
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
-	border-top-color: #ffffff;
+	border-top-color: #00f900;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -10px;
