@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-<audio controls ref="audioFile">
+<audio controls ref="audioFile" style="visibility:hidden">
   <source src="../assets/teto-intro.mp3" type="audio/mpeg">
 </audio>
     <div style="padding-top:40%">
