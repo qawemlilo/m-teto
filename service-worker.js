@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/m-teto/precache-manifest.5a88e1b8b3cf9fd41e32324e449950ae.js"
+  "/m-teto/precache-manifest.ac463286dac7b7d4daca60fb51b0afbc.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "teto"});

@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ebbbcceb7bfacc5a4fb7",
-    "url": "/m-teto/css/app.c73c4853.css"
+    "revision": "7cbc630f46f10a65e476",
+    "url": "/m-teto/css/app.eef7d1b2.css"
   },
   {
     "revision": "fff40ffef9161028fd1d",
@@ -20,12 +20,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/m-teto/img/teto.55e6a903.gif"
   },
   {
-    "revision": "471c76080b677e4f87e9b0501612fdc7",
+    "revision": "f619e5cb855841e5a84643d8fa4ec973",
     "url": "/m-teto/index.html"
   },
   {
-    "revision": "ebbbcceb7bfacc5a4fb7",
-    "url": "/m-teto/js/app.d53b0341.js"
+    "revision": "7cbc630f46f10a65e476",
+    "url": "/m-teto/js/app.41849936.js"
   },
   {
     "revision": "fff40ffef9161028fd1d",
